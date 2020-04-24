@@ -37,7 +37,8 @@ object Train {
       val conf = Engine.createSparkConf()
         .setAppName("Train Lenet on MNIST")
         .set("spark.task.maxFailures", "1")
-        .setMaster("local[*]")
+        .setMaster("local[4]")
+
       val sc = new SparkContext(conf)
       Engine.init
 

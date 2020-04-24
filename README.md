@@ -2,4 +2,4 @@
 
 ## Settings
 ### Program arguments (idea)
-    -f mnist -b 64 --checkpoint ./model
+    -f mnist -b 64 --checkpoint model

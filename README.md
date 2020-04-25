@@ -23,9 +23,9 @@ t10k-labels-idx1-ubyte
         sudo apt-get install openjdk-8-jdk
         //If you have more than one Java version installed on your system use following command to switch versions
         sudo update-alternatives --config java 
-        Spark version - 2.3.4  
-        Scala version - 2.11.8  
-        Java8
+    Spark version - 2.3.4  
+    Scala version - 2.11.8  
+    Java8
 2. Add Spark to ~/bashrc
 
         vim ~/bashrc

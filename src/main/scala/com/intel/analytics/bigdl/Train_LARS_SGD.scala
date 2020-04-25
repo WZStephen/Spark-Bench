@@ -26,7 +26,7 @@ import com.intel.analytics.bigdl.utils._
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkContext
 
-object Train {
+object Train_LARS_SGD {
   LoggerFilter.redirectSparkInfoLogs()
 
 
@@ -67,8 +67,14 @@ object Train {
       val optimMethod = if (param.stateSnapshot.isDefined) {
         OptimMethod.load[Float](param.stateSnapshot.get)
       } else {
-        new SGD[Float](learningRate = param.learningRate,
-          learningRateDecay = param.learningRateDecay)
+        new LarsSGD[Float](
+          true,
+          1,
+          0.001,
+          0.01,
+          0.0005,
+          0.5
+          )
       }
 
       val trainSet = DataSet.array(load(trainData, trainLabel), sc) ->

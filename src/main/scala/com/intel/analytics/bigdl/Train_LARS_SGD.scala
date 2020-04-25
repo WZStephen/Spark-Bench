@@ -38,7 +38,6 @@ object Train_LARS_SGD {
         .setAppName("Train Lenet on MNIST")
         .set("spark.task.maxFailures", "1")
         .setMaster("local[4]")
-
       val sc = new SparkContext(conf)
       Engine.init
 
@@ -67,14 +66,14 @@ object Train_LARS_SGD {
       val optimMethod = if (param.stateSnapshot.isDefined) {
         OptimMethod.load[Float](param.stateSnapshot.get)
       } else {
-        new LarsSGD[Float](
-          true,
-          1,
-          0.001,
-          0.01,
-          0.0005,
-          0.5
-          )
+         new LarsSGD[Float](
+           true,
+           1,
+           0.001,
+           0.01,
+           0.0005,
+           0.5)
+        //new LarsSGD[Float](true, _learningRate = 0.1)
       }
 
       val trainSet = DataSet.array(load(trainData, trainLabel), sc) ->
@@ -109,3 +108,4 @@ object Train_LARS_SGD {
     })
   }
 }
+

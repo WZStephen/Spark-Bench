@@ -43,6 +43,8 @@ t10k-labels-idx1-ubyte
 
         
 ## Steps to run from this repository:
+
+### Training
 * The command below is the way to run Lenet5 on Mnist dataset (15 epochs for each 60000 training data and 10000 for testing data)
 * Refer https://github.com/intel-analytics/BigDL/tree/master/spark/dl/src/main/scala/com/intel/analytics/bigdl/models/lenet for more information
 1. Build by SBT
@@ -72,6 +74,8 @@ t10k-labels-idx1-ubyte
 * --summary: Where you store the training metainfo, which can be visualized in tensorboard
 * --checkpoint: Where the model is stored
 * --deriver-memoery: should be adjusted depends on your system's memoery
+
+### Testing
 1. Command for running in local Spark cluster mode (Testing)
         
         spark-submit \

@@ -2,7 +2,9 @@
 
 ## Debug Settings
 ### Program arguments (idea)
-    -f mnist -b 64 --checkpoint model
+    -f mnist -b 1024 --checkpoint model_sgd
+    -f mnist -b 1024 --checkpoint model_lars_sgd
+
 
 ## LeNet5 Model on MNIST (http://yann.lecun.com/exdb/lenet/)
 

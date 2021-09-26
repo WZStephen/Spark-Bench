@@ -28,7 +28,7 @@ t10k-labels-idx1-ubyte
     Java8
 2. Add Spark to ~/bashrc
 
-        vim ~/bashrc
+        vim ~/.bashrc
         SPARK_HOME=~/spark
         export PATH=$SPARK_HOME/bin:$PATH
         export PYSPARK_PYTHON=/usr/bin/python3

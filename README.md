@@ -64,7 +64,7 @@ t10k-labels-idx1-ubyte
         spark-submit --master local[4] \
         --driver-memory 10g \
         --class com.intel.analytics.bigdl.Train_LARS_SGD \
-        Spark-Bench-assembly-0.1.0.jar \
+        target/scala-2.11/Spark-Bench-assembly-0.1.0.jar \
         -f mnist \
         -b 64 \
         --checkpoint ./model_lars_sgd
